@@ -58,13 +58,13 @@ def cmd_edit(args):
     with open(filename, 'a+') as file:
       a = 1
       while True :
-      		line = input(f"{a} ")
-      		if line == "save":
-            print(f'{filename} was saved')
-            break
-          else:
-            file.write(f"\n{line}")
-	     	 	a = a+1
+      	line = input(f'{a} ')
+      	if line == ".save":
+      		print(f'{filename} has been saved')
+      		break
+      	else:
+      		file.write(f'\n{line}')
+      	a = a+1
 
 def cmd_runpy(args):
     if args:
