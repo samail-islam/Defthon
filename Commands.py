@@ -1,5 +1,3 @@
-# commands.py
-
 import os
 import shutil
 import subprocess
@@ -84,27 +82,33 @@ def cmd_clear(args):
 def cmd_date(args):
     print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
  
-def cmd_help(self):
-    print("Available commands:")
-    print("  ls [dir]              - List files")
-    print("  cd <dir>              - Change directory")
-    print("  pwd                   - Show current path")
-    print("  mkdir <name>          - Make directory")
-    print("  touch <file>          - Create empty file")
-    print("  edit <file>           - Edit a file")
-    print("  rm <file>             - Delete file")
-    print("  rename <old> <new>    - Rename file or folder")
-    print("  runpy <script>        - Run Python script")
-    print("  pipinstall <package>  - Install pip package")
-    print("  date                  - Show date/time")
-    print("  echo <text>           - Print text")
-    print("  clear                 - Clear screen")
-    print("  help                  - Show commands")
-    print("  exit                  - Quit PyOS")
 
-
+def cmd_help(args):
+    help_text = """
+Available Commands:
+ ls                     - List directory contents
+ cd <dir>            - Change directory
+ pwd                 - Show current directory
+ mkdir <name>        - Create a new directory
+ touch <file>        - Create a new empty file
+ rm <target>         - Delete a file or directory
+ rename <old> <new>  - Rename a file or directory
+ edit <file>         - Edit a text file
+ runpy <script.py>   - Run a Python script
+ pipinstall <pkg>    - Install a Python package
+ clear               - Clear the screen
+ date                - Show current date and time
+ echo <text>         - Print text to screen
+ help                - Show commands
+ apps                - Show apps
+ exit                - Exit the OS
+"""
+    print(help_text)
 def cmd_echo(args):
     print(' '.join(args))
+
+def cmd_apps(self):
+    print("1. Watson - A simple username searcher tool. [ Learn more on https://github.com/samail-islam/Watson ]")
 
 def cmd_exit(args):
     print("Exiting PyOS...")
