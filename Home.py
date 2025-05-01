@@ -14,6 +14,7 @@ COMMAND_MAP = {
     'date': commands.cmd_date,
     'echo': commands.cmd_echo,
     'help': commands.cmd_help,
+    'apps': commands.cmd_apps,
     'exit': commands.cmd_exit,
 }
 
