@@ -1,4 +1,7 @@
 import commands
+import apps
+from colorama import init,Fore,Style
+init()
 COMMAND_MAP = {
     'ls': commands.cmd_ls,
     'cd': commands.cmd_cd,
@@ -15,6 +18,7 @@ COMMAND_MAP = {
     'echo': commands.cmd_echo,
     'help': commands.cmd_help,
     'apps': commands.cmd_apps,
+    'Watson': apps.watson.scan_username,
     'exit': commands.cmd_exit,
 }
 
@@ -27,12 +31,12 @@ def parse_command(command_line):
     if handler:
         handler(args)
     else:
-        print(f"Unknown command: {cmd}")
+        print(Fore.RED + f"Unknown command: {cmd}")
 
 def main():
     while True:
         try:
-            user_input = input("pyos> ")
+            user_input = input(Fore.GREEN +"defthon/~$  " + Style.RESET_ALL)
             parse_command(user_input)
         except Exception as e:
             print(e)
