@@ -36,7 +36,7 @@ def parse_command(command_line):
 def main():
     while True:
         try:
-            user_input = input(Fore.GREEN +"defthon/~$  " + Style.RESET_ALL)
+            user_input = input(Fore.GREEN +"defthon/$  " + Style.RESET_ALL)
             parse_command(user_input)
         except Exception as e:
             print(e)
