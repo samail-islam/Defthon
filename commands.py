@@ -6,7 +6,9 @@ from datetime import datetime
 
 def cmd_ls(args):
     path = args[0] if args else '.'
-    print(os.listdir(path))
+    lis = os.listdir(path)
+    for i in lis:
+        print(i)
 
 def cmd_cd(args):
     if args:
